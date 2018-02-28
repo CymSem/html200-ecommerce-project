@@ -1,6 +1,36 @@
+/* main.css */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
   font-size: 100%;
   font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+
+.container {
+  display:flex;
+  justify-content:center space-around;
+  flex-direction:column;
+  flex-wrap:wrap;
+}
+
+
+
+/* The animation code */
+    @-webkit-keyframes whirlwind {
+      from {align-content: center;}
+      } to {align-content: flex-start;}
+
+}
+.cat {
+  display:flex;
+  width: 10%;
+  height: auto;
+  -webkit-animation-name: whirlwind;
+  -webkit-animation-duration: 8s;
 }
 
 p {
@@ -9,10 +39,18 @@ p {
   color: #2d2d2d;
 }
 
-/* TODO: size images manually so this is not necessary */
-img {
-  max-height: 20rem;
+p::first-line {
+   color: cornflowerblue;
+   font-family:
 }
+
+.rhyme-header {
+    color: darkgray;
+    font-style: italic;
+}
+
+/* TODO: size images manually so this is not necessary */
+
 
 /***************** NAV *****************/
 
@@ -22,12 +60,10 @@ nav a:hover {
 
 /**************** HERO *****************/
 
-header img {
-  max-height: 6rem;
-}
-
 h1 .logo-w {
-  font-size: 3.5rem;
+  background-color: white;
+  color: cornflowerblue;
+  font-size: 5rem;
 }
 
 /**************** ASIDE ****************/
@@ -44,7 +80,17 @@ input[type="submit"] {
 /*********** PRODUCTS SECTION ***********/
 
 section {
+  display: block;
   padding: 0 .75rem;
+}
+
+.scarf {
+  display:inline-block;
+  padding: .25rem;
+  border: 1px solid #BFC9CA;
+  border-radius: 5px
+  max-width: 30%;
+
 }
 
 h2 {
